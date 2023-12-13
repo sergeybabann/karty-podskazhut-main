@@ -1,0 +1,59 @@
+:root {
+  /* Переменные */
+  --main-font: "raleway";
+  --accent-font: "STIX Two Text";
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+blockquote,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+}
+
+.heading {
+  font-family: var(--accent-font, serif);
+  font-weight: 600;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.header {
+  padding-block-start: 10%; /* padding-top: 10% Размер отступа — 10% ширины */
+}
+
+.header__title {
+  margin-block-end: 40px;
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+
+.content__title {
+  margin: 7% 0 2.5%; /* 7% - top, 0 - left & right, 2.5% - bottom */
+  font-size: 30px;
+}
+
+.content-section {
+  padding: 0 5vi;
+}
+
+.page {
+  min-inline-size: 360px;
+  margin: 0;
+  color: var(--text-color, #312a4e);
+  font-family: var(--main-font, san-serif);
+  background-color: var(--bg-color, #f3efec);
+}
