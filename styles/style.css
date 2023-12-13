@@ -65,9 +65,49 @@ figure {
   color: inherit;
 }
 
+.content__blockquote {
+  /* цитата */
+  inline-size: 75%; /* ширина цитаты 75% от ширины родителя */
+  line-height: 2; /* 200% указано в figma, и это значит значение 2 */
+  font-style: italic;
+  margin: 0 auto 1.5em;
+  /* в видео обзоре не раскрывается как высчитать отступы. И я не смог разобраться */
+}
+
+.content__list {
+  /* список внизу страницы */
+  padding: 0 0 0 40px;
+  list-style: none;
+}
+
+/*----- Отсюда начинается стидизация кастомных булетов списка -----*/
+.content__list li {
+  /* стилизация буллетов списка */
+  position: relative;
+}
+
+.content__list li:not(:last-of-type) {
+  /* выбираем все элементы li родителя content__list, кроме последнего */
+  margin-block-end: 10px;
+}
+
 .content__text-block .content__paragraph:not(:last-of-type) {
-  /* выбираем все элементы кроме последнего в обертке content__text-block */
+  /* выбираем всех детей .content__paragraph родителя content__text-block, кроме последнего */
   margin-block-end: 1.5em;
+}
+
+.content__list li::before {
+  content: "";
+  position: absolute;
+  inline-size: 15px;
+  block-size: 15px;
+  margin-block-start: -7.5px;
+  background-image: url(../images/marker-dark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  inset-block-start: 50%;
+  inset-inline-start: -25px;
 }
 
 .page {
