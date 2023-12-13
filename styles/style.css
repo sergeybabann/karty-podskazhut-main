@@ -1,5 +1,5 @@
 :root {
-  /* Переменные */
+  /* CSS-Переменные */
   --main-font: "raleway";
   --accent-font: "STIX Two Text";
   --bg-color: #f3efec;
@@ -25,32 +25,53 @@ figure {
   margin: 0;
 }
 
+.header {
+  /* область header */
+  padding-block-start: 10%; /* padding-top: 10% Размер отступа — 10% ширины */
+}
+
+.header__title {
+  /* h1 заголовок в шапке */
+  margin-block-end: 40px;
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+
 .heading {
+  /* h2 заголовки абзацев текста */
   font-family: var(--accent-font, serif);
   font-weight: 600;
   line-height: 0.9;
   text-align: center;
 }
 
-.header {
-  padding-block-start: 10%; /* padding-top: 10% Размер отступа — 10% ширины */
-}
-
-.header__title {
-  margin-block-end: 40px;
-  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
-}
-
 .content__title {
+  /* Класс для всех заголовков в main. Общие правила: отступы, фиксированный размер шрифта */
   margin: 7% 0 2.5%; /* 7% - top, 0 - left & right, 2.5% - bottom */
   font-size: 30px;
 }
 
 .content-section {
+  /* создание полей по бокам */
   padding: 0 5vi;
 }
 
+.content__text-block {
+  /* обертка для абзацев текста их должно быть всего 5 по количеству */
+  font-size: 18px;
+}
+
+.content__text-block a {
+  /* задаем color ссылкам от родителя */
+  color: inherit;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  /* выбираем все элементы кроме последнего в обертке content__text-block */
+  margin-block-end: 1.5em;
+}
+
 .page {
+  /* вся страница */
   min-inline-size: 360px;
   margin: 0;
   color: var(--text-color, #312a4e);
