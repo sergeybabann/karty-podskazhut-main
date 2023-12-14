@@ -139,6 +139,43 @@ figure {
   font-size: 18px;
   text-align: center;
 }
+/* классы изображения законились */
+
+/*----- Классы карточки -----*/
+.content__card {
+  /* Карточка */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 7%;
+  border: 1px solid currentColor;
+  aspect-ratio: 4/3; /* пропорции для карточки */
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+}
+
+.colored-text {
+  position: relative;
+  display: inline-block;
+}
+
+.colored-text::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  border-color: var(--accent-color);
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
+}
 
 .page {
   /* вся страница */
