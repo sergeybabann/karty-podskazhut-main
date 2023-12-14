@@ -25,6 +25,24 @@ figure {
   margin: 0;
 }
 
+a:focus,
+button:focus {
+  /* сброс outline по тегам */
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  /* новый ouline для focus-visible */
+  outline: 1px solid currentColor;
+}
+
+button:disabled {
+  /* события не доступны для этой конпки.
+  Если мы находимся на светлой теме, то кнопка "Светлая" не реагирует при наведении */
+  pointer-events: none;
+}
+
 .header {
   /* область header */
   padding-block-start: 10%; /* padding-top: 10% Размер отступа — 10% ширины */
@@ -227,6 +245,17 @@ figure {
   border-color: var(--accent-color);
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
+}
+
+.footer {
+  margin-block-start: 10%;
+  border-block-start: 1px solid currentColor;
+  padding: 2.5%;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 18px;
 }
 
 .page {
