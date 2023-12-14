@@ -15,6 +15,32 @@
     <!----- HEADER ----->
     <header class="header">
       <h1 class="heading header__title content-section">Карты подскажут</h1>
+      <!-----menu navigation ---->
+      <nav class="header__menu content-section">
+        <div class="header__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
+            <use href="./images/logo.svg#logo"></use>
+          </svg>
+        </div>
+
+        <!----- Кнопки ----->
+        <ul class="header__theme-toggler">
+          <li>
+            <button class="header__theme-button header__theme-button_type_dark">
+              Темная
+            </button>
+          </li>
+
+          <li>
+            <button
+              disabled
+              class="header__theme-button header__theme-button_type_light header__theme-button_is-active"
+            >
+              Светлая
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!----- MAIN ----->

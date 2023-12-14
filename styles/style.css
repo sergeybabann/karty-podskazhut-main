@@ -36,6 +36,58 @@ figure {
   font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
 }
 
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-start: 1px solid currentColor; /* верхний border */
+  border-block-end: 1px solid currentColor; /* нижний border */
+  padding-block: 20px; /* общий padding */
+}
+
+/*----- Классы для кнопок -----*/
+.header__theme-toggler {
+  /* контейнер списка */
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.header__theme-button {
+  /* обе кнопки */
+  position: relative;
+  border: none;
+  padding: 0;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  /*  активная кнопка */
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  /* активная кнопка со стилизацией цветного оранжевого
+  подчеркивания аналогичного в карточке */
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  background-color: var(--accent-color);
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
+}
+
 .heading {
   /* h2 заголовки абзацев текста */
   font-family: var(--accent-font, serif);
