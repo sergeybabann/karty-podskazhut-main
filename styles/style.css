@@ -51,7 +51,7 @@ figure {
 }
 
 .content-section {
-  /* создание полей по бокам */
+  /* создание полей по бокам. по 5 единиц слева и справа */
   padding: 0 5vi;
 }
 
@@ -119,6 +119,25 @@ figure {
   font-weight: 700;
   font-size: 30px;
   background-color: var(--accent-color);
+}
+
+/*----- Классы для изображения -----*/
+.content__picture {
+  inline-size: 100%;
+}
+
+.content__figure {
+  position: relative;
+  inline-size: calc(100% + 10vi);
+  margin: 7% auto;
+  inset-inline-end: 5vi;
+}
+
+.content__picture-caption {
+  border-block-end: 1px solid currentColor;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .page {
